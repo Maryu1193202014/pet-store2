@@ -5,7 +5,8 @@ $lname= $_POST['l_name'];
 $email= $_POST['e_mail'];
 $passw= $_POST['p_assw'];
 
-$hashed_password = password_hash($passw, PASSWORD_DEFAULT);
+//$hashed_password = password_hash($passw, PASSWORD_DEFAULT);
+$hashed_password = $passw; // For simplicity, not hashing the password in this example
 
 
 
@@ -30,8 +31,11 @@ if($ans){//$ans==true
 
 ";
 $ans = pg_query($conn, $sql);
+
 if($ans){
-    echo"user has been created successfully";
+
+    echo"<script>alert('User has been created. go to login ')</script>";
+    header('refresh: 0; url=http://127.0.0.1/pet-store2/src/login.html');
 }else{
     echo "Error";
 }
