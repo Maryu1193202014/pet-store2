@@ -50,11 +50,17 @@ if(!isset($_SESSION['user_id'])){
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+           <!-- Nav Item - Dashboard -->
+           <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
+            </li>
+
+            <!-- Nav Item - List Board -->
+            <li class="nav-item active">
+                <a class="nav-link" href="list-user.php">
+                    <span>List Board</span></a>
             </li>
 
             <!-- Divider -->
